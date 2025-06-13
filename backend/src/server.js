@@ -10,6 +10,9 @@ const PORT = process.env.PORT || 5001
 
 connectDB()
 
+// middleware
+app.use(express.json()) // This is required to parse req.body
+
 app.use("/api/notes", notesRoutes)
 
 app.listen(PORT, () => {
